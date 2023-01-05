@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Brand extends Model
 {
-    protected $connection = 'mysql2';
+    // protected $connection = 'mysql2';
 
     public function photos(){
     	return $this->morphMany('App\Photo','imageable');

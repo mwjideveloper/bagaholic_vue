@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Wishlist extends Model
 {
-    protected $connection = 'mysql2';
+    // protected $connection = 'mysql2';
 
     public function wishlists() {
         return $this->morphTo(__FUNCTION__, 'customer_userable_type', 'customer_userable_id');

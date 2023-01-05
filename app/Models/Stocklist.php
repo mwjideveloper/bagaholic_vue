@@ -10,7 +10,7 @@ class Stocklist extends Model
 {   
     use StocklistScopes;
 
-    protected $connection = 'mysql2';
+    // protected $connection = 'mysql2';
 
     public function apparelCatalogable()
     {

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Photo extends Model
 {   
-    protected $connection = 'mysql2';
+    // protected $connection = 'mysql2';
     
     public function imageable() {
     	return $this->morphTo();

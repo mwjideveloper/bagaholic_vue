@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Apparelcatalog extends Model
 {
-    protected $connection = 'mysql2';
+    // protected $connection = 'mysql2';
 
     function brand(){
     	return $this->belongsto('App\Brand');
