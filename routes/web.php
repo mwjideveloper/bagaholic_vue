@@ -13,6 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('{any}', function () {
+    return view('layouts.app');
+})->where('any', '.*');
+
+Route::get('/clear-cache', function() {
+    Artisan::call('cache:clear');
+    Artisan::call('config:clear');
+    return "Cache and Config is cleared";
+});
+
+
+// SAMPLE TEST
+Route::get('/sample', 'ShopController@test');
+
+//CHECK SESSION FUNCTION
+Route::get('/check/stocks', function () {
+    dd(session('stocklists'));
 });
